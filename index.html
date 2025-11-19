@@ -21,13 +21,12 @@
     gtag('config', 'AW-17708713590');
   </script>
 
-  <!-- Conversion helper (from Google Ads) -->
+  <!-- Conversion helper -->
   <script>
-    // Função padrão do Google Ads para relatar conversão e redirecionar (event_callback)
     function gtag_report_conversion(url) {
-      console.log('gtag_report_conversion chamado, url:', url);
+      console.log('Conversão disparada para:', url);
       var callback = function () {
-        if (typeof(url) != 'undefined') {
+        if (typeof(url) !== 'undefined') {
           window.location = url;
         }
       };
@@ -42,6 +41,7 @@
 </head>
 
 <body id="top">
+
   <!-- HEADER -->
   <header class="site-header">
     <div class="container nav">
@@ -98,9 +98,7 @@
             Iniciar atendimento
           </a>
 
-          <a class="btn btn-outline" href="#contato">
-            Ver contatos
-          </a>
+          <a class="btn btn-outline" href="#contato">Ver contatos</a>
         </div>
       </div>
 
@@ -121,12 +119,106 @@
     </div>
   </section>
 
-  <!-- (restante do HTML permanece idêntico ao seu arquivo) -->
+  <!-- SOBRE -->
+  <section id="sobre" class="section">
+    <div class="container">
 
-  <!-- ... seu conteúdo -->
+      <header class="section-header">
+        <h2 class="section-title">Sobre o escritório</h2>
+        <p class="section-subtitle">
+          Advocacia contemporânea, digital e estratégica.
+        </p>
+      </header>
+
+      <div class="sobre-grid">
+
+        <div class="sobre-text">
+          <p>
+            O AG Jurídico Estratégico combina conhecimento técnico com ferramentas digitais para oferecer soluções jurídicas eficientes e seguras.
+            Atuamos com foco em resultados, mitigação de riscos e orientação preventiva.
+          </p>
+
+          <p>
+            Nossa atuação abrange consultoria e advocacia contenciosa, com foco em planejamento processual e proteção de interesses.
+          </p>
+        </div>
+
+        <div class="sobre-box">
+          <p><strong>Atendimento remoto:</strong> consultas e reuniões por videochamada e WhatsApp.</p>
+          <p><strong>Estratégia:</strong> planejamento processual e mitigação de riscos.</p>
+          <p><strong>Sigilo profissional:</strong> atuação ética e confidencial.</p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ÁREAS -->
+  <section id="areas" class="areas">
+    <div class="container">
+      <h2>Áreas de Atuação</h2>
+
+      <div class="areas-grid" style="margin-bottom: 2rem;">
+        <a href="direito-penal.html" class="area-card"><h3>Direito Penal</h3><p>Defesa, liberdade, recursos e acompanhamento.</p></a>
+        <a href="direito-trabalhista.html" class="area-card"><h3>Direito Trabalhista</h3><p>Ações, horas extras e rescisões.</p></a>
+        <a href="direito-municipal.html" class="area-card"><h3>Direito Municipal</h3><p>Assessoria ao Poder Público.</p></a>
+      </div>
+
+      <div class="areas-grid">
+        <a href="direito-civil.html" class="area-card"><h3>Direito Civil</h3><p>Contratos, responsabilidade civil e família.</p></a>
+        <a href="contratos-licitacoes.html" class="area-card"><h3>Contratos e Licitações</h3><p>Suporte completo em licitações.</p></a>
+        <a href="consultoria-juridica.html" class="area-card"><h3>Consultoria Jurídica</h3><p>Pareceres e acompanhamento.</p></a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CONTATO -->
+  <section id="contato" class="section">
+    <div class="container">
+
+      <header class="section-header">
+        <h2 class="section-title">Contato</h2>
+        <p class="section-subtitle">Atendimento jurídico 100% digital, personalizado e ágil.</p>
+      </header>
+
+      <div class="contato-grid">
+
+        <div class="contato-list">
+          <p><strong>WhatsApp:</strong>
+            <a href="https://wa.me/5579988614292" target="_blank" rel="noopener">(+55) 79 98861-4292</a>
+          </p>
+
+          <p><strong>E-mail:</strong>
+            <a href="mailto:alcivanguimaraes.adv@gmail.com">alcivanguimaraes.adv@gmail.com</a>
+          </p>
+
+          <p><strong>Serviços:</strong> Envio de documentos, consultas, pareceres, estratégia jurídica.</p>
+          <p><strong>Atendimento:</strong> videoconferência e WhatsApp.</p>
+        </div>
+
+        <aside class="contato-destaque">
+          <p>
+            Envie sua mensagem com breve resumo do caso e documentos disponíveis.
+          </p>
+        </aside>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container">
+      © <span id="anoAtual"></span> AG Jurídico Estratégico • Alcivan Guimarães dos Santos • OAB/SE 16.699
+    </div>
+  </footer>
 
   <script src="js/main.js"></script>
 
+  <!-- Auto attach para conversão -->
   <script>
   (function() {
     try {
@@ -138,41 +230,32 @@
       ];
       var selector = whatsappSelectors.join(',');
       var attachToExisting = function() {
-        var links = document.querySelectorAll(selector);
-        links.forEach(function(link) {
+        document.querySelectorAll(selector).forEach(function(link) {
           if (link.dataset.gtagWhatsAppAttached) return;
           link.dataset.gtagWhatsAppAttached = '1';
 
           link.addEventListener('click', function(event) {
             event.preventDefault();
             var href = this.href;
-            try {
-              gtag_report_conversion(href);
-            } catch (e) {
-              window.location = href;
-            }
+            gtag_report_conversion(href);
           }, false);
         });
       };
-
       if (document.readyState === 'loading') {
         document.addEventListener('DOMContentLoaded', attachToExisting);
       } else {
         attachToExisting();
       }
-
-      var observer = new MutationObserver(function(mutations) {
-        attachToExisting();
-      });
-      observer.observe(document.body, { childList: true, subtree: true });
+      new MutationObserver(attachToExisting).observe(document.body, { childList: true, subtree: true });
     } catch (err) {
-      console.error('Auto-attach WhatsApp script error:', err);
+      console.error('Erro no script do WhatsApp:', err);
     }
   })();
   </script>
 
   <script>
-    (function(){ var el = document.getElementById('anoAtual'); if(el) el.textContent = new Date().getFullYear(); })();
+    document.getElementById('anoAtual').textContent = new Date().getFullYear();
   </script>
+
 </body>
 </html>
