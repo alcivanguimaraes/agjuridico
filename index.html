@@ -2,19 +2,22 @@
 <html lang="pt-BR">
 <head>
   <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=AW-17708713590"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'AW-17708713590');
-</script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17708713590"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'AW-17708713590');
+  </script>
+
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <title>AG Jurídico Estratégico | Advocacia Online</title>
 
-  <meta name="description" content="Atendimento jurídico 100% online em todo o Brasil. AG Jurídico Estratégico – Alcivan Guimarães dos Santos, advogado OAB/SE 16.699. Consultoria, defesa penal, trabalhista, consumidor, municipal e cível.">
+  <meta name="description"
+    content="Atendimento jurídico 100% online em todo o Brasil. AG Jurídico Estratégico – Alcivan Guimarães dos Santos, advogado OAB/SE 16.699. Consultoria, defesa penal, trabalhista, consumidor, municipal e cível.">
+
   <meta name="author" content="Alcivan Guimarães dos Santos">
 
   <link rel="stylesheet" href="css/style.css" />
@@ -38,7 +41,14 @@
         <a href="#sobre">Sobre</a>
         <a href="#areas">Áreas</a>
         <a href="#contato">Contato</a>
-        <a class="nav-whatsapp" href="https://wa.me/5579988614292?text=Olá,+gostaria+de+iniciar+um+atendimento+online." target="_blank">WhatsApp</a>
+
+        <!-- MENU WHATSAPP (CONVERSÃO) -->
+        <a class="nav-whatsapp"
+          href="https://wa.me/5579988614292?text=Olá,+gostaria+de+iniciar+um+atendimento+online."
+          target="_blank"
+          onclick="gtag('event','conversion',{'send_to':'AW-17708713590/ijfVCNZtv8lDEPaMIvxB'});">
+          WhatsApp
+        </a>
       </nav>
 
     </div>
@@ -46,7 +56,9 @@
 
   <!-- BOTÃO FIXO DE WHATSAPP -->
   <a href="https://wa.me/5579988614292?text=Olá,+gostaria+de+iniciar+um+atendimento"
-     class="whatsapp-fixo" target="_blank">
+     class="whatsapp-fixo"
+     target="_blank"
+     onclick="gtag('event','conversion',{'send_to':'AW-17708713590/ijfVCNZtv8lDEPaMIvxB'});">
      💬 Converse comigo no WhatsApp
   </a>
 
@@ -72,9 +84,12 @@
         </div>
 
         <div class="hero-actions">
+
+          <!-- HERO WHATSAPP (CONVERSÃO) -->
           <a class="btn btn-primary"
-             href="https://wa.me/5579988614292?text=Olá,+quero+agendar+uma+consulta+online."
-             target="_blank">
+            href="https://wa.me/5579988614292?text=Olá,+quero+agendar+uma+consulta+online."
+            target="_blank"
+            onclick="gtag('event','conversion',{'send_to':'AW-17708713590/ijfVCNZtv8lDEPaMIvxB'});">
             Iniciar atendimento
           </a>
 
@@ -136,50 +151,47 @@
     </div>
   </section>
 
-  <!-- ÁREAS (3 + 3) -->
-<section id="areas" class="areas">
-  <div class="container">
-    <h2>Áreas de Atuação</h2>
+  <!-- ÁREAS -->
+  <section id="areas" class="areas">
+    <div class="container">
+      <h2>Áreas de Atuação</h2>
 
-    <!-- Linha 1 -->
-    <div class="areas-grid" style="margin-bottom: 2rem;">
-      <a href="direito-penal.html" class="area-card" aria-label="Direito Penal — Clique para saber mais">
-        <h3>Direito Penal</h3>
-        <p>Período de liberdade, revogação, defesa em processos penais.</p>
-      </a>
+      <div class="areas-grid" style="margin-bottom: 2rem;">
+        <a href="direito-penal.html" class="area-card" aria-label="Direito Penal — Clique para saber mais">
+          <h3>Direito Penal</h3>
+          <p>Período de liberdade, revogação, defesa em processos penais.</p>
+        </a>
 
-      <a href="direito-trabalhista.html" class="area-card" aria-label="Direito Trabalhista — Clique para saber mais">
-        <h3>Direito Trabalhista</h3>
-        <p>Ações trabalhistas, reclamações, horas extras e rescisões.</p>
-      </a>
+        <a href="direito-trabalhista.html" class="area-card" aria-label="Direito Trabalhista — Clique para saber mais">
+          <h3>Direito Trabalhista</h3>
+          <p>Ações trabalhistas, reclamações, horas extras e rescisões.</p>
+        </a>
 
-      <a href="direito-municipal.html" class="area-card" aria-label="Direito Municipal — Clique para saber mais">
-        <h3>Direito Municipal</h3>
-        <p>Assessoria ao Poder Público, licitações, legislação municipal.</p>
-      </a>
+        <a href="direito-municipal.html" class="area-card" aria-label="Direito Municipal — Clique para saber mais">
+          <h3>Direito Municipal</h3>
+          <p>Assessoria ao Poder Público, licitações, legislação municipal.</p>
+        </a>
+      </div>
+
+      <div class="areas-grid">
+        <a href="direito-civil.html" class="area-card" aria-label="Direito Civil — Clique para saber mais">
+          <h3>Direito Civil</h3>
+          <p>Contratos, responsabilidade civil, família e sucessões.</p>
+        </a>
+
+        <a href="contratos-licitacoes.html" class="area-card" aria-label="Contratos e Licitações — Clique para saber mais">
+          <h3>Contratos e Licitações</h3>
+          <p>Elaboração de contratos, análise e suporte em licitações.</p>
+        </a>
+
+        <a href="consultoria-juridica.html" class="area-card" aria-label="Consultoria Jurídica — Clique para saber mais">
+          <h3>Consultoria Jurídica</h3>
+          <p>Consultoria preventiva, pareceres e acompanhamento jurídico.</p>
+        </a>
+      </div>
+
     </div>
-
-    <!-- Linha 2 -->
-    <div class="areas-grid">
-      <a href="direito-civil.html" class="area-card" aria-label="Direito Civil — Clique para saber mais">
-        <h3>Direito Civil</h3>
-        <p>Contratos, responsabilidade civil, família e sucessões.</p>
-      </a>
-
-      <a href="contratos-licitacoes.html" class="area-card" aria-label="Contratos e Licitações — Clique para saber mais">
-        <h3>Contratos e Licitações</h3>
-        <p>Elaboração de contratos, análise e suporte em licitações.</p>
-      </a>
-
-      <a href="consultoria-juridica.html" class="area-card" aria-label="Consultoria Jurídica — Clique para saber mais">
-        <h3>Consultoria Jurídica</h3>
-        <p>Consultoria preventiva, pareceres e acompanhamento jurídico.</p>
-      </a>
-    </div>
-
-  </div>
-</section>
-
+  </section>
 
   <!-- CONTATO -->
   <section id="contato" class="section">
@@ -196,7 +208,10 @@
 
         <div class="contato-list">
           <p><strong>WhatsApp (atendimento rápido e direto):</strong>
-            <a href="https://wa.me/5579988614292" target="_blank">(+55) 79 98861-4292</a>
+            <a href="https://wa.me/5579988614292" target="_blank"
+              onclick="gtag('event','conversion',{'send_to':'AW-17708713590/ijfVCNZtv8lDEPaMIvxB'});">
+              (+55) 79 98861-4292
+            </a>
           </p>
 
           <p><strong>E-mail (Alcivan):</strong>
@@ -232,4 +247,3 @@
   <script src="js/main.js"></script>
 </body>
 </html>
-
