@@ -1,205 +1,135 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AG Jurídico Estratégico – Alcivan Guimarães dos Santos</title>
 
-  <title>AG Jurídico Estratégico | Advocacia Online</title>
-  <link rel="canonical" href="https://www.agjuridico.com.br/">
+    <!-- Google Tag (substitua pelo seu ID se necessário) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17788713590"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'AW-17788713590');
+    </script>
 
-  <meta name="description" content="Atendimento jurídico 100% online em todo o Brasil. AG Jurídico Estratégico – Alcivan Guimarães dos Santos, advogado OAB/SE 16.699. Consultoria, defesa penal, trabalhista, consumidor, municipal e cível.">
-  <meta name="author" content="Alcivan Guimarães dos Santos">
-
-  <link rel="stylesheet" href="css/style.css" />
-
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17708713590"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'AW-17708713590');
-  </script>
-
-  <!-- Conversion helper (robusto) -->
-  <script>
-    function gtag_report_conversion(url) {
-      try {
-        console.log('gtag_report_conversion chamado, url:', url);
-        var called = false;
-
-        var callback = function () {
-          if (called) return;
-          called = true;
-          try {
-            // abre nova aba (equivalente a target="_blank")
-            window.open(url, '_blank', 'noopener,noreferrer');
-          } catch (e) {
-            window.location = url;
-          }
-        };
-
-        if (typeof gtag === 'function') {
-          gtag('event', 'conversion', {
-            'send_to': 'AW-17708713590/ah-sC0rJjcMbEPaMlvxB',
-            'event_callback': callback
-          });
-        } else {
-          console.warn('gtag não disponível — usando fallback');
-          callback();
-        }
-
-        // garantia: se callback não ocorrer em 1s, executa fallback
-        setTimeout(function(){
-          if (!called) callback();
-        }, 1000);
-
-        return false;
-      } catch (err) {
-        console.error('Erro em gtag_report_conversion:', err);
-        window.location = url;
-        return false;
-      }
-    }
-  </script>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
-<body id="top">
+<body>
 
-  <!-- HEADER -->
-  <header class="site-header">
-    <div class="container nav">
-      <a href="#top" class="logo"><span>AG</span> Jurídico Estratégico</a>
-      <button class="nav-toggle" aria-label="Menu"><span></span><span></span><span></span></button>
-      <nav class="nav-menu">
-        <a href="#sobre">Sobre</a>
-        <a href="#areas">Áreas</a>
-        <a href="#contato">Contato</a>
-        <a class="nav-whatsapp" href="https://wa.me/5579988614292?text=Olá,+gostaria+de+iniciar+um+atendimento+online.">WhatsApp</a>
-      </nav>
-    </div>
-  </header>
-
-  <!-- BOTÃO FIXO DE WHATSAPP -->
-  <a href="https://wa.me/5579988614292?text=Olá,+gostaria+de+iniciar+um+atendimento"
-     class="whatsapp-fixo">
-     💬 Converse comigo no WhatsApp
-  </a>
-
-  <!-- HERO -->
-  <section class="hero">
-    <div class="container hero-grid">
-      <div class="hero-left">
-        <h1>
-          Advocacia estratégica e digital,<br>
-          atendimento remoto para todo o <span>Brasil</span>.
-        </h1>
-        <p>Atuação jurídica orientada por estratégia e tecnologia, com foco em soluções preventivas e contenciosas.</p>
-
-        <div class="hero-badges">
-          <span class="badge badge-gold">OAB/SE 16.699</span>
-          <span class="badge">Consultas online</span>
-          <span class="badge">Atendimento nacional</span>
+    <!-- MENU SUPERIOR -->
+    <header class="topbar">
+        <div class="container">
+            <h1 class="logo">AG Jurídico Estratégico</h1>
+            <nav>
+                <a href="#sobre">Sobre</a>
+                <a href="#areas">Áreas</a>
+                <a href="#contato">Contato</a>
+                <a class="btn-whatsapp-top" href="https://wa.me/5579988614298" target="_blank">WhatsApp</a>
+            </nav>
         </div>
+    </header>
 
-        <div class="hero-actions">
-          <a class="btn btn-primary"
-             href="https://wa.me/5579988614292?text=Olá,+quero+agendar+uma+consulta+online.">
-            Iniciar atendimento
-          </a>
+    <!-- SOBRE -->
+    <section id="sobre" class="section">
+        <div class="container">
+            <h2>Sobre</h2>
+            <p>
+                Sou Alcivan Guimarães dos Santos, advogado inscrito na OAB/SE 16.699, atuando na entrega de soluções jurídicas estratégicas, objetivas e conduzidas de forma totalmente remota. Acredito que o cliente precisa de informação clara, orientação segura e acompanhamento próximo — com a agilidade e organização que a advocacia contemporânea exige.
+            </p>
 
-          <a class="btn btn-outline" href="#contato">Ver contatos</a>
+            <p>
+                Sou pós-graduado em <strong>Direito Penal e Processo Penal</strong>, área em que desenvolvo atuação técnica e estratégica, voltada à defesa qualificada, à condução adequada de investigações e à proteção de garantias em todas as fases processuais, incluindo medidas urgentes, recursos e Tribunal do Júri.
+            </p>
+
+            <p>
+                Também possuo pós-graduação em <strong>Direito Municipal</strong>, além de <strong>Contratos e Licitações</strong>, o que me permite atuar de forma sólida em consultorias, assessorias jurídicas, elaboração e análise contratual, demandas administrativas e questões envolvendo gestão pública e relações institucionais.
+            </p>
+
+            <p>
+                Minha advocacia se baseia em três pilares:
+            </p>
+
+            <ul>
+                <li><strong>Transparência</strong> — Explicações claras, linguagem acessível e acompanhamento detalhado desde o primeiro contato.</li>
+                <li><strong>Estratégia</strong> — Análise minuciosa dos fatos e atuação técnica para construção de soluções eficazes.</li>
+                <li><strong>Agilidade</strong> — Atendimento remoto com respostas rápidas e organização moderna.</li>
+            </ul>
+
+            <p>
+                Seja para consultoria, contratos, questões cíveis, demandas municipais, defesa penal ou situações trabalhistas, ofereço um atendimento responsável, humano e comprometido com a verdade dos fatos e com a melhor solução possível para o seu caso.
+            </p>
         </div>
-      </div>
+    </section>
 
-      <aside class="hero-right">
-        <img src="img/perfil.jpg" alt="Foto de Alcivan Guimarães dos Santos" class="foto-advogado">
-        <h2 class="hero-card-title">Alcivan Guimarães dos Santos</h2>
-        <p class="hero-card-line"><strong>Advogado</strong> • OAB/SE 16.699</p>
-      </aside>
-    </div>
-  </section>
+    <!-- ÁREAS DE ATUAÇÃO -->
+    <section id="areas" class="areas-section">
+        <div class="container">
+            <h2>Áreas de Atuação</h2>
+            <p class="areas-subtitle">Atendimento remoto, estratégico e com clareza em todas as etapas.</p>
 
-  <!-- (restante do conteúdo igual ao seu arquivo) -->
+            <div class="areas-grid">
 
-  <!-- CONTATO -->
-  <section id="contato" class="section">
-    <div class="container">
-      <header class="section-header">
-        <h2 class="section-title">Contato</h2>
-        <p class="section-subtitle">Atendimento jurídico 100% digital, personalizado e ágil.</p>
-      </header>
+                <div class="area-card">
+                    <h3>Consultoria Jurídica</h3>
+                    <p>Orientação preventiva, pareceres e suporte estratégico para decisões seguras.</p>
+                </div>
 
-      <div class="contato-grid">
-        <div class="contato-list">
-          <p><strong>WhatsApp:</strong>
-            <a href="https://wa.me/5579988614292">(+55) 79 98861-4292</a>
-          </p>
-          <p><strong>E-mail:</strong>
-            <a href="mailto:alcivanguimaraes.adv@gmail.com">alcivanguimaraes.adv@gmail.com</a>
-          </p>
+                <div class="area-card">
+                    <h3>Contratos e Licitações</h3>
+                    <p>Elaboração, revisão e análise contratual, além de consultoria em licitações.</p>
+                </div>
+
+                <div class="area-card">
+                    <h3>Direito Civil</h3>
+                    <p>Obrigações, responsabilidade civil, contratos, indenizações e relações jurídicas.</p>
+                </div>
+
+                <div class="area-card">
+                    <h3>Direito Municipal</h3>
+                    <p>Consultoria a municípios, gestores e servidores, além de processos administrativos.</p>
+                </div>
+
+                <div class="area-card">
+                    <h3>Direito Penal</h3>
+                    <p>Atuação completa em investigações, audiências, medidas urgentes e Tribunal do Júri.</p>
+                </div>
+
+                <div class="area-card">
+                    <h3>Direito Trabalhista</h3>
+                    <p>Reclamações, acordos, verbas rescisórias e defesa técnica.</p>
+                </div>
+
+            </div>
+
+            <div class="areas-cta">
+                <a class="btn-whatsapp" href="https://wa.me/5579988614298" target="_blank">
+                    Converse pelo WhatsApp
+                </a>
+            </div>
         </div>
+    </section>
 
-        <aside class="contato-destaque">
-          <p>Envie sua mensagem com breve resumo do caso e documentos disponíveis.</p>
-        </aside>
-      </div>
-    </div>
-  </section>
+    <!-- CONTATO -->
+    <section id="contato" class="section">
+        <div class="container">
+            <h2>Contato</h2>
+            <p>E-mail profissional: <strong>alcivanguimaraes.adv@gmail.com</strong></p>
+            <p>Telefone/WhatsApp: <strong>(79) 98861-4298</strong></p>
+            <a class="btn-whatsapp" href="https://wa.me/5579988614298" target="_blank">
+                Falar pelo WhatsApp
+            </a>
+        </div>
+    </section>
 
-  <!-- FOOTER -->
-  <footer class="site-footer">
-    <div class="container">
-      © <span id="anoAtual"></span> AG Jurídico Estratégico • Alcivan Guimarães dos Santos • OAB/SE 16.699
-    </div>
-  </footer>
-
-  <script src="js/main.js"></script>
-
-  <!-- Auto-attach melhorado para links WhatsApp -->
-  <script>
-  (function() {
-    try {
-      var whatsappSelectors = [
-        'a[href^="https://wa.me/"]',
-        'a[href^="http://wa.me/"]',
-        'a[href^="https://api.whatsapp.com/"]',
-        'a[href^="http://api.whatsapp.com/"]'
-      ];
-      var selector = whatsappSelectors.join(',');
-      var attachToExisting = function() {
-        document.querySelectorAll(selector).forEach(function(link) {
-          if (link.dataset.gtagWhatsAppAttached) return;
-          link.dataset.gtagWhatsAppAttached = '1';
-
-          link.addEventListener('click', function(event) {
-            event.preventDefault();
-            var href = this.href;
-            try {
-              gtag_report_conversion(href);
-            } catch (e) {
-              console.error('Erro ao chamar gtag_report_conversion:', e);
-              // fallback: abre em nova aba
-              window.open(href, '_blank', 'noopener,noreferrer');
-            }
-          }, false);
-        });
-      };
-      if (document.readyState === 'loading') {
-        document.addEventListener('DOMContentLoaded', attachToExisting);
-      } else {
-        attachToExisting();
-      }
-      new MutationObserver(attachToExisting).observe(document.body, { childList: true, subtree: true });
-    } catch (err) {
-      console.error('Erro no script do WhatsApp:', err);
-    }
-  })();
-  </script>
-
-  <script>
-    document.getElementById('anoAtual').textContent = new Date().getFullYear();
-  </script>
+    <!-- RODAPÉ -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 – AG Jurídico Estratégico – Todos os direitos reservados.</p>
+        </div>
+    </footer>
 
 </body>
 </html>
