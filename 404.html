@@ -4,11 +4,20 @@
     <meta charset="utf-8">
     <title>AG Jurídico Estratégico</title>
     <script>
+      // Redirecionar URLs sem hash para URLs com hash
       (function() {
-        var redirect = sessionStorage.redirect;
-        delete sessionStorage.redirect;
-        if (redirect && redirect !== location.pathname) {
-          history.replaceState(null, null, redirect);
+        var pathname = window.location.pathname;
+        var search = window.location.search;
+        
+        // Se a URL não começa com /agjuridico ou está em uma subrota, redirecionar para hash-based routing
+        if (pathname !== '/' && pathname !== '/index.html') {
+          // Remove o prefixo do repositório se existir
+          var route = pathname.replace(/^\/agjuridico/, '');
+          
+          // Se não for um arquivo estático (não tem extensão), redirecionar para hash
+          if (!route.includes('.')) {
+            window.location.replace('/#' + route + search);
+          }
         }
       })();
     </script>
