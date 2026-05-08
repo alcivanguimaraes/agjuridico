@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="pt-BR">
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1" />
+    <title>AG Jurídico Estratégico | Advocacia Premium</title>
+    <meta name="description" content="Advocacia estratégica com técnica, inteligência e resultado. Serviços jurídicos premium em todo o Brasil." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-XXXXXXXXXX', {
+        'anonymize_ip': true,
+        'allow_google_signals': false
+      });
+    </script>
+    
+    <!-- Facebook Pixel -->
+    <script>
+      !function(f,b,e,v,n,t,s)
+      {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+      n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+      if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+      n.queue=[];t=b.createElement(e);t.async=!0;
+      t.src=v;s=b.getElementsByTagName(e)[0];
+      s.parentNode.insertBefore(t,s)}
+      (window, document,'script',
+      'https://connect.facebook.net/en_US/fbevents.js');
+      fbq('init', '1234567890123456'); // Substitua pelo seu Pixel ID
+      fbq('track', 'PageView');
+    </script>
+
+  </head>
+
+  <body class="bg-slate-950">
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+    <script
+      defer
+      src="%VITE_ANALYTICS_ENDPOINT%/umami"
+      data-website-id="%VITE_ANALYTICS_WEBSITE_ID%"></script>
+    
+    <!-- Tracking Events Script -->
+    <script>
+      // Rastrear cliques em WhatsApp
+      document.addEventListener('click', function(e) {
+        if (e.target.href && e.target.href.includes('wa.me')) {
+          // Google Analytics
+          if (typeof gtag !== 'undefined') {
+            gtag('event', 'whatsapp_click', {
+              'event_category': 'engagement',
+              'event_label': 'WhatsApp Contact'
+            });
+          }
+          // Facebook Pixel
+          if (typeof fbq !== 'undefined') {
+            fbq('track', 'Contact', {content_name: 'WhatsApp Click'});
+          }
+        }
+      });
+    </script>
+  </body>
+
+</html>
